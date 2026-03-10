@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>IconFont Demo</title>
+  <link rel="shortcut icon" href="https://gtms04.alicdn.com/tps/i4/TB1_oz6GVXXXXaFXpXXJDFnIXXX-64-64.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://g.alicdn.com/thx/cube/1.3.2/cube.min.css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="iconfont.css">
+  <script src="iconfont.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://a1.alicdn.com/oss/uploads/2018/12/26/7bfddb60-08e8-11e9-9b04-53e73bb6408b.js"></script>
+  <!-- Code Highlight -->
+  <script src="https://a1.alicdn.com/oss/uploads/2018/12/26/a3f714d0-08e6-11e9-8a15-ebf944d7534c.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <h1 class="logo">
+      <a href="https://www.iconfont.cn/" title="iconfont Home" target="_blank">&#xe86b;</a>
+    </h1>
+
+    <div class="nav-tabs">
+      <ul id="tabs" class="dib-box">
+        <li class="dib active"><span>Unicode</span></li>
+        <li class="dib"><span>Font class</span></li>
+        <li class="dib"><span>Symbol</span></li>
+      </ul>
+    </div>
+
+    <div class="tab-container">
+
+      <!-- Unicode Section -->
+      <div class="content unicode" style="display: block;">
+        <ul class="icon_lists dib-box">
+
+          <li class="dib">
+            <span class="icon iconfont">&#xe60a;</span>
+            <div class="name">qq</div>
+            <div class="code-name">&amp;#xe60a;</div>
+          </li>
+
+          <li class="dib">
+            <span class="icon iconfont">&#xe653;</span>
+            <div class="name">weibo</div>
+            <div class="code-name">&amp;#xe653;</div>
+          </li>
+
+          <li class="dib">
+            <span class="icon iconfont">&#xe62b;</span>
+            <div class="name">wechat</div>
+            <div class="code-name">&amp;#xe62b;</div>
+          </li>
+
+          <li class="dib">
+            <span class="icon iconfont">&#xe63a;</span>
+            <div class="name">github</div>
+            <div class="code-name">&amp;#xe63a;</div>
+          </li>
+
+        </ul>
+
+        <div class="article markdown">
+
+          <h2>Unicode Reference</h2>
+          <hr>
+
+          <p>Unicode is the most basic way to use fonts on web pages. Features:</p>
+
+          <ul>
+            <li>Best compatibility, supports IE6+ and all modern browsers.</li>
+            <li>You can dynamically adjust icon size, color, etc. like fonts.</li>
+            <li>But since it is a font, it does not support multi-color icons.</li>
+          </ul>
+
+          <blockquote>
+            <p>Note: The new iconfont supports multi-color icons, but they cannot be used in Unicode mode. If needed, use the symbol method.</p>
+          </blockquote>
+
+          <p>Steps to use Unicode:</p>
+
+          <h3>Step 1: Copy the generated <code>@font-face</code></h3>
+
+<pre><code class="language-css">
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+      url('iconfont.woff2') format('woff2'),
+      url('iconfont.woff') format('woff'),
+      url('iconfont.ttf') format('truetype'),
+      url('iconfont.svg#iconfont') format('svg');
+}
+</code></pre>
+
+          <h3>Step 2: Define iconfont style</h3>
+
+<pre><code class="language-css">
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+}
+</code></pre>
+
+          <h3>Step 3: Use the icon code</h3>
+
+<pre><code class="language-html">
+<span class="iconfont">&#x33;</span>
+</code></pre>
+
+        </div>
+      </div>
+
+
+      <!-- Font Class Section -->
+      <div class="content font-class">
+
+        <ul class="icon_lists dib-box">
+
+          <li class="dib">
+            <span class="icon iconfont icon-qq"></span>
+            <div class="name">qq</div>
+            <div class="code-name">.icon-qq</div>
+          </li>
+
+          <li class="dib">
+            <span class="icon iconfont icon-weibo-copy"></span>
+            <div class="name">weibo</div>
+            <div class="code-name">.icon-weibo-copy</div>
+          </li>
+
+          <li class="dib">
+            <span class="icon iconfont icon-weixin"></span>
+            <div class="name">wechat</div>
+            <div class="code-name">.icon-weixin</div>
+          </li>
+
+          <li class="dib">
+            <span class="icon iconfont icon-github"></span>
+            <div class="name">github</div>
+            <div class="code-name">.icon-github</div>
+          </li>
+
+        </ul>
+
+        <div class="article markdown">
+
+          <h2>Font Class Reference</h2>
+          <hr>
+
+          <p>Font-class is a variation of Unicode that makes icons easier to understand.</p>
+
+          <ul>
+            <li>Good compatibility (IE8+).</li>
+            <li>More readable than Unicode.</li>
+            <li>You only need to change class name to replace icons.</li>
+            <li>Still does not support multi-color icons.</li>
+          </ul>
+
+          <p>Steps:</p>
+
+<pre><code class="language-html">
+<link rel="stylesheet" href="./iconfont.css">
+</code></pre>
+
+<pre><code class="language-html">
+<span class="iconfont icon-xxx"></span>
+</code></pre>
+
+        </div>
+      </div>
+
+
+      <!-- Symbol Section -->
+      <div class="content symbol">
+
+        <ul class="icon_lists dib-box">
+
+          <li class="dib">
+            <svg class="icon svg-icon">
+              <use xlink:href="#icon-qq"></use>
+            </svg>
+            <div class="name">qq</div>
+            <div class="code-name">#icon-qq</div>
+          </li>
+
+          <li class="dib">
+            <svg class="icon svg-icon">
+              <use xlink:href="#icon-weibo-copy"></use>
+            </svg>
+            <div class="name">weibo</div>
+            <div class="code-name">#icon-weibo-copy</div>
+          </li>
+
+          <li class="dib">
+            <svg class="icon svg-icon">
+              <use xlink:href="#icon-weixin"></use>
+            </svg>
+            <div class="name">wechat</div>
+            <div class="code-name">#icon-weixin</div>
+          </li>
+
+          <li class="dib">
+            <svg class="icon svg-icon">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+            <div class="name">github</div>
+            <div class="code-name">#icon-github</div>
+          </li>
+
+        </ul>
+
+        <div class="article markdown">
+
+          <h2>Symbol Reference</h2>
+          <hr>
+
+          <p>This is a newer method and the recommended way.</p>
+
+          <ul>
+            <li>Supports multi-color icons.</li>
+            <li>You can change style using CSS.</li>
+            <li>Supports IE9+ and modern browsers.</li>
+            <li>SVG rendering performance is average.</li>
+          </ul>
+
+          <p>Steps:</p>
+
+<pre><code class="language-html">
+<script src="./iconfont.js"></script>
+</code></pre>
+
+<pre><code class="language-html">
+<style>
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>
+</code></pre>
+
+<pre><code class="language-html">
+<svg class="icon">
+  <use xlink:href="#icon-xxx"></use>
+</svg>
+</code></pre>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+$(document).ready(function () {
+
+  $('.tab-container .content:first').show()
+
+  $('#tabs li').click(function () {
+
+    var tabContent = $('.tab-container .content')
+    var index = $(this).index()
+
+    if ($(this).hasClass('active')) {
+      return
+    } else {
+
+      $('#tabs li').removeClass('active')
+      $(this).addClass('active')
+
+      tabContent.hide().eq(index).fadeIn()
+    }
+  })
+})
+</script>
+
+</body>
+</html>
